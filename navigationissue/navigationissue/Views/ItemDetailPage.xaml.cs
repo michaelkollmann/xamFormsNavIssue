@@ -33,5 +33,10 @@ namespace navigationissue.Views
             viewModel = new ItemDetailViewModel(item);
             BindingContext = viewModel;
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ModalPage());
+        }
     }
 }
